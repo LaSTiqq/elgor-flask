@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Latvian company crafting premium firewood from various wood types including birch, oak, alder, maple, pine, and spruce. Open to partnerships across Europe.">
+    <title>SIA "L-GOR" :: About</title>
+    <link rel="canonical" href="https://www.elgor.lv/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="{{ url_for('static', filename='img/logo/favicon.ico') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo/favicon.ico') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='img/logo/apple-touch-icon.png') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="{{ static_url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <header class="bg-body-secondary">
+        {% include 'inc/_nav.html' %}
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+        <a href="#top" title="Move up">
+            <div id="arrow" class="position-fixed text-dark">
+                <i class="fa-solid fa-caret-up fa-2xl"></i>
+            </div>
+        </a>
+    </main>
+    <footer class="py-3 bg-dark-subtle">
+        {% include 'inc/_foo.html' %}
+    </footer>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://kit.fontawesome.com/17b4039aee.js" crossorigin="anonymous"></script>
+    <script
+        src="https://www.google.com/recaptcha/api.js?render=6LfKamonAAAAAIR7O00Dq36sOQ3OePxh1TkZ8oQu&hl=en"></script>
+    <script>
+        grecaptcha.ready(function () {
+            document.getElementById("contact-form").addEventListener(
+                "submit", function (event) {
+                    event.preventDefault();
+                    grecaptcha.execute("6LfKamonAAAAAIR7O00Dq36sOQ3OePxh1TkZ8oQu", {
+                        action: "contact"
+                    }).then(function (token) {
+                        document.getElementById("g-recaptcha-response").value = token;
+                        document.getElementById("contact-form").submit();
+                    });
+                }, false);
+        });
+    </script>
+    <script src="{{ static_url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/modernizr-custom.js') }}"></script>
+</body>
+
+</html>
