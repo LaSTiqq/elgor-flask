@@ -44,7 +44,7 @@ class ContactForm(FlaskForm):
         label='Text',
         render_kw={
             'class': 'form-control bg-transparent mt-1',
-            'placeholder': 'Message text',
+            'placeholder': 'Message text *',
             'autocomplete': 'off',
             'rows': 6,
         },
