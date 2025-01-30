@@ -1,22 +1,22 @@
 // Arrow to the top of the page
 const arrow = document.getElementById("arrow");
 
-arrow.style.display = "none";
+arrow.classList.add("d-none");
 
 const scrollFunction = () => {
   const scrolled =
     document.body.scrollTop > 50 || document.documentElement.scrollTop > 50;
 
-  if (scrolled) {
-    arrow.style.display = "block";
+  if (scrolled && window.innerWidth >= 768) {
+    arrow.classList.remove("d-none");
+    arrow.classList.add("d-md-block");
   } else {
-    arrow.style.display = "none";
+    arrow.classList.remove("d-md-block");
+    arrow.classList.add("d-none");
   }
 };
 
-window.onscroll = () => {
-  scrollFunction();
-};
+window.addEventListener("scroll", scrollFunction);
 
 // Working form alert button without Bootstrap JS
 const closeButton = document.querySelector(".btn-close");
