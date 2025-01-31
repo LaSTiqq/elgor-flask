@@ -4,7 +4,7 @@ from flask_wtf.csrf import CSRFProtect
 from flask_talisman import Talisman
 from flask_mail import Message, Mail
 from config import Config
-from utils import restricted_list, year
+from utils import restricted_list, year, redirect_with_anchor
 from forms import ContactForm
 import requests
 import re
@@ -28,7 +28,7 @@ def index():
     if form.validate_on_submit():
         if any(restricted_list(form[field].data) for field in ['name', 'subject', 'message']):
             flash("You wrote something disallowed! Try again.", "warning")
-            return redirect(url_for("index") + "#contacts")
+            return redirect_with_anchor("contacts")
 
         recaptcha_response = request.form.get('g-recaptcha-response')
         secret_key = os.getenv('RECAPTCHA_PRIVATE_KEY')
@@ -40,7 +40,7 @@ def index():
         result = response.json()
         if not result.get('success') or result.get('score', 0) < app.config['RECAPTCHA_REQUIRED_SCORE']:
             flash("Captcha verification failed. Please try again.", "danger")
-            return redirect(url_for("index") + "#contacts")
+            return redirect_with_anchor("contacts")
 
         html_content = render_template("email.html", name=form.name.data,
                                        sender=form.email.data, content=form.message.data)
@@ -55,10 +55,10 @@ def index():
             msg.html = html_content
             mail.send(msg)
             flash("Message sent!", "success")
-            return redirect(url_for("index") + "#contacts")
+            return redirect_with_anchor("contacts")
         except Exception:
             flash("Something went wrong! Try again.", "danger")
-            return redirect(url_for("index") + "#contacts")
+            return redirect_with_anchor("contacts")
     return render_template('index.html', form=form, current_year=current_year)
 
 
