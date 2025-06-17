@@ -2,269 +2,282 @@
 {% block content %}
 <div class="container-fluid bg-body-tertiary">
 	<div class="container">
-		<div class="row breeds pt-4 pt-xl-5">
-			<!-- Breeds -->
-			<div class="col-12 col-md-7">
-				<div class="main-carousel">
-					<div class="carousel-cell mx-1">
-						<picture>
-							<source srcset="{{ url_for('static', filename='img/samples/sample_1.webp') }}"
-								type="image/webp">
-							<img src="{{ url_for('static', filename='img/samples/sample_1.jpg') }}"
-								alt="Firewood sample #1">
-						</picture>
-					</div>
-					<div class="carousel-cell mx-1">
-						<picture>
-							<source srcset="{{ url_for('static', filename='img/samples/sample_4.webp') }}"
-								type="image/webp">
-							<img src="{{ url_for('static', filename='img/samples/sample_4.jpg') }}"
-								alt="Firewood sample #4">
-						</picture>
-					</div>
-					<div class="carousel-cell mx-1">
-						<picture>
-							<source srcset="{{ url_for('static', filename='img/samples/sample_5.webp') }}"
-								type="image/webp">
-							<img src="{{ url_for('static', filename='img/samples/sample_5.jpg') }}"
-								alt="Firewood sample #5">
-						</picture>
-					</div>
-					<div class="carousel-cell mx-1">
-						<picture>
-							<source srcset="{{ url_for('static', filename='img/samples/sample_2.webp') }}"
-								type="image/webp">
-							<img src="{{ url_for('static', filename='img/samples/sample_2.jpg') }}"
-								alt="Firewood sample #2">
-						</picture>
-					</div>
-					<div class="carousel-cell mx-1">
-						<picture>
-							<source srcset="{{ url_for('static', filename='img/samples/sample_6.webp') }}"
-								type="image/webp">
-							<img src="{{ url_for('static', filename='img/samples/sample_6.jpg') }}"
-								alt="Firewood sample #6">
-						</picture>
-					</div>
-					<div class="carousel-cell mx-1">
-						<picture>
-							<source srcset="{{ url_for('static', filename='img/samples/sample_7.webp') }}"
-								type="image/webp">
-							<img src="{{ url_for('static', filename='img/samples/sample_7.jpg') }}"
-								alt="Firewood sample #7">
-						</picture>
-					</div>
-					<div class="carousel-cell mx-1">
-						<picture>
-							<source srcset="{{ url_for('static', filename='img/samples/sample_3.webp') }}"
-								type="image/webp">
-							<img src="{{ url_for('static', filename='img/samples/sample_3.jpg') }}"
-								alt="Firewood sample #3">
-						</picture>
-					</div>
-					<div class="carousel-cell mx-1">
-						<picture>
-							<source srcset="{{ url_for('static', filename='img/samples/sample_8.webp') }}"
-								type="image/webp">
-							<img src="{{ url_for('static', filename='img/samples/sample_8.jpg') }}"
-								alt="Firewood sample #8">
-						</picture>
+		<section class="breeds pt-4 pt-xl-5">
+			<div class="row">
+				<!-- Breeds -->
+				<div class="col-12 col-md-7">
+					<div class="main-carousel">
+						<div class="carousel-cell mx-1">
+							<picture>
+								<source srcset="{{ url_for('static', filename='img/samples/sample_1.webp') }}"
+									type="image/webp">
+								<img src="{{ url_for('static', filename='img/samples/sample_1.jpg') }}"
+									alt="Firewood sample #1">
+							</picture>
+						</div>
+						<div class="carousel-cell mx-1">
+							<picture>
+								<source srcset="{{ url_for('static', filename='img/samples/sample_4.webp') }}"
+									type="image/webp">
+								<img src="{{ url_for('static', filename='img/samples/sample_4.jpg') }}"
+									alt="Firewood sample #4">
+							</picture>
+						</div>
+						<div class="carousel-cell mx-1">
+							<picture>
+								<source srcset="{{ url_for('static', filename='img/samples/sample_5.webp') }}"
+									type="image/webp">
+								<img src="{{ url_for('static', filename='img/samples/sample_5.jpg') }}"
+									alt="Firewood sample #5">
+							</picture>
+						</div>
+						<div class="carousel-cell mx-1">
+							<picture>
+								<source srcset="{{ url_for('static', filename='img/samples/sample_2.webp') }}"
+									type="image/webp">
+								<img src="{{ url_for('static', filename='img/samples/sample_2.jpg') }}"
+									alt="Firewood sample #2">
+							</picture>
+						</div>
+						<div class="carousel-cell mx-1">
+							<picture>
+								<source srcset="{{ url_for('static', filename='img/samples/sample_6.webp') }}"
+									type="image/webp">
+								<img src="{{ url_for('static', filename='img/samples/sample_6.jpg') }}"
+									alt="Firewood sample #6">
+							</picture>
+						</div>
+						<div class="carousel-cell mx-1">
+							<picture>
+								<source srcset="{{ url_for('static', filename='img/samples/sample_7.webp') }}"
+									type="image/webp">
+								<img src="{{ url_for('static', filename='img/samples/sample_7.jpg') }}"
+									alt="Firewood sample #7">
+							</picture>
+						</div>
+						<div class="carousel-cell mx-1">
+							<picture>
+								<source srcset="{{ url_for('static', filename='img/samples/sample_3.webp') }}"
+									type="image/webp">
+								<img src="{{ url_for('static', filename='img/samples/sample_3.jpg') }}"
+									alt="Firewood sample #3">
+							</picture>
+						</div>
+						<div class="carousel-cell mx-1">
+							<picture>
+								<source srcset="{{ url_for('static', filename='img/samples/sample_8.webp') }}"
+									type="image/webp">
+								<img src="{{ url_for('static', filename='img/samples/sample_8.jpg') }}"
+									alt="Firewood sample #8">
+							</picture>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="col-12 col-md-5 d-flex align-items-center">
-				<div class="box d-flex align-items-center">
-					<h1 class="text-center text-white mb-0">
-						The company is involved in crafting top-quality firewood and uses a wide range of wood
-						types, including sturdy, soft, and hardwoods like birch, oak, alder, maple, pine, and
-						spruce. No need to worry; we have a closed production cycle that covers
-						everything from the forest to delivery to you.
-					</h1>
+				<div class="col-12 col-md-5 d-flex align-items-center">
+					<div class="box d-flex align-items-center">
+						<h1 class="text-center text-white mb-0">
+							The company is involved in crafting top-quality firewood and uses a wide range of wood
+							types, including sturdy, soft, and hardwoods like birch, oak, alder, maple, pine, and
+							spruce. No need to worry; we have a closed production cycle that covers
+							everything from the forest to delivery to you.
+						</h1>
+					</div>
+				</div>
+				<div class="col-12 d-flex justify-content-center">
+					<a class="contact-link fw-bold focus-ring mt-3" href="#how_it_works">Learn more</a>
 				</div>
 			</div>
-			<div class="col-12 d-flex justify-content-center">
-				<a class="contact-link fw-bold focus-ring mt-3" href="#how_it_works">Learn more</a>
-			</div>
-		</div>
+		</section>
 		<hr>
-		<div class="row countries mt-4">
-			<!-- Countries -->
-			<h2 class="text-center fw-bold mb-0">Locations</h2>
-			<h3 class="text-center mb-4">Explore where are our partners and we</h3>
-			<div class="col-12 col-md-3 d-flex align-items-center">
-				<div class="box">
-					<h3 class="text-center text-white mb-0">We're working with multiple companies around Europe.
-						We're open to collaborating with new ones.
-					</h3>
-				</div>
-			</div>
-			<div class="col-12 col-md-9 d-flex justify-content-center">
-				<picture>
-					<source srcset="{{ url_for('static', filename='img/countries.webp') }}" type="image/webp">
-					<img src="{{ url_for('static', filename='img/countries.jpg') }}"
-						alt="Europe map of partner countries">
-				</picture>
-			</div>
-		</div>
-		<hr>
-		<div class="row digits mt-4">
-			<!-- Digits -->
-			<h2 class="text-center fw-bold mb-0">Achievements</h2>
-			<h3 class="text-center mb-4">What we've achieved and proud of</h3>
-			<div class="col-6 col-lg-3">
-				<div class="box d-flex flex-column justify-content-center align-items-center my-3 my-lg-0">
-					<i class="fa-solid fa-calendar-days fa-2xl"></i>
-					<h4 class="fw-bold">10+</h4>
-					<p class="text-center px-1 px-lg-4">Years of experience</p>
-				</div>
-			</div>
-			<div class="col-6 col-lg-3">
-				<div class="box d-flex flex-column justify-content-center align-items-center my-3 my-lg-0">
-					<i class="fa-solid fa-truck fa-2xl"></i>
-					<h4 class="fw-bold">420</h4>
-					<p class="text-center px-1 px-lg-4">Cargo sent in 2022</p>
-				</div>
-			</div>
-			<div class="col-6 col-lg-3">
-				<div class="box d-flex flex-column justify-content-center align-items-center my-3 my-lg-0">
-					<i class="fa-solid fa-sack-dollar fa-2xl"></i>
-					<h4 class="fw-bold">2.3kk</h4>
-					<p class="text-center px-1 px-lg-4">Cash flow in 2022</p>
-				</div>
-			</div>
-			<div class="col-6 col-lg-3">
-				<div class="box d-flex flex-column justify-content-center align-items-center my-3 my-lg-0">
-					<i class="fa-solid fa-handshake-simple fa-2xl"></i>
-					<h4 class="fw-bold">15</h4>
-					<p class="text-center px-1 px-lg-4">Agreements in 2022</p>
-				</div>
-			</div>
-		</div>
-		<hr>
-		<div class="row roadmap mt-4">
-			<!-- Roadmap -->
-			<a name="how_it_works"></a>
-			<h2 class="text-center fw-bold mb-2 mb-lg-0">Production cycle</h2>
-			<h3 class="text-center mb-4">How it works?</h3>
-			<div class="timeline">
-				<div class="cell position-relative">
-					<div class="info">
-						<h4 class="title position-relative fw-bold">Buying or growing forest</h4>
-						<picture>
-							<source srcset="{{ url_for('static', filename='img/stages/growing_1.webp') }}"
-								type="image/webp">
-							<img src="{{ url_for('static', filename='img/stages/growing_1.jpg') }}"
-								alt="Buying or growing forest sample">
-						</picture>
+		<section class="countries mt-4">
+			<div class="row">
+				<!-- Countries -->
+				<h2 class="text-center fw-bold mb-0">Locations</h2>
+				<h3 class="text-center mb-4">Explore where are our partners and we</h3>
+				<div class="col-12 col-md-3 d-flex align-items-center">
+					<div class="box">
+						<h3 class="text-center text-white mb-0">We're working with multiple companies around Europe.
+							We're open to collaborating with new ones.
+						</h3>
 					</div>
 				</div>
-				<div class="cell position-relative">
-					<div class="info">
-						<h4 class="title position-relative fw-bold">Tree harvesting</h4>
-						<picture>
-							<source srcset="{{ url_for('static', filename='img/stages/harvesting_2.webp') }}"
-								type="image/webp">
-							<img src="{{ url_for('static', filename='img/stages/harvesting_2.jpg') }}"
-								alt="Tree harvesting sample">
-						</picture>
-					</div>
-				</div>
-				<div class="cell position-relative">
-					<div class="info">
-						<h4 class="title position-relative fw-bold">Tree processing</h4>
-						<picture>
-							<source srcset="{{ url_for('static', filename='img/stages/processing_3.webp') }}"
-								type="image/webp">
-							<img src="{{ url_for('static', filename='img/stages/processing_3.jpg') }}"
-								alt="Tree processing sample">
-						</picture>
-					</div>
-				</div>
-				<div class="cell position-relative">
-					<div class="info">
-						<h4 class="title position-relative fw-bold">Firewood drying</h4>
-						<picture>
-							<source srcset="{{ url_for('static', filename='img/stages/drying_4.webp') }}"
-								type="image/webp">
-							<img src="{{ url_for('static', filename='img/stages/drying_4.jpg') }}"
-								alt="Firewood drying sample">
-						</picture>
-					</div>
-				</div>
-				<div class="cell position-relative">
-					<div class="info">
-						<h4 class="title position-relative fw-bold">Firewood loading for delivery</h4>
-						<picture>
-							<source srcset="{{ url_for('static', filename='img/stages/loading_5.webp') }}"
-								type="image/webp">
-							<img src="{{ url_for('static', filename='img/stages/loading_5.jpg') }}"
-								alt="Firewood loading for delivery sample">
-						</picture>
-					</div>
-				</div>
-			</div>
-		</div>
-		<hr>
-		<div class="row cnc mt-4">
-			<!-- Contacts & Certificates-->
-			<a name="contacts"></a>
-			<h2 class="text-center fw-bold mb-0">Contacts</h2>
-			<h3 class="text-center mb-3">Find out how to reach us?</h3>
-			<div class="col-md-6">
-				<h4 class="text-center mb-3"><i class="fa-solid fa-bullhorn"></i>&nbsp;Call or email us directly:</h4>
-				<ul class="list-unstyled text-center">
-					<li>
-						<i class="fa-solid fa-phone"></i><span class="fw-bold">&nbsp;Phone</span>:
-						<a href="tel:+37126677812" class="focus-ring">(+371) 26 677 812</a>
-					</li>
-					<li>
-						<i class="fa-solid fa-envelope"></i><span class="fw-bold">&nbsp;Email</span>:
-						<a href="mailto:forvest@inbox.lv" class="focus-ring">forvest@inbox.lv</a>
-					</li>
-				</ul>
-				<div class="d-flex justify-content-center align-items-center">
+				<div class="col-12 col-md-9 d-flex justify-content-center">
 					<picture>
-						<source srcset="{{ url_for('static', filename='img/certificate/fsc.webp') }}" type="image/webp">
-						<img src="{{ url_for('static', filename='img/certificate/fsc.png') }}" alt="FSC Certificate">
+						<source srcset="{{ url_for('static', filename='img/countries.webp') }}" type="image/webp">
+						<img src="{{ url_for('static', filename='img/countries.jpg') }}"
+							alt="Europe map of partner countries">
 					</picture>
 				</div>
 			</div>
-			<div class="col-12 col-md-6">
-				<h4 class="text-center mb-3">Use the form below:
-					<i class="fa-solid fa-arrow-turn-down"></i>
-				</h4>
-				{% with messages = get_flashed_messages(with_categories=true) %}
-				{% if messages %}
-				{% for category, message in messages %}
-				<div class="alert alert-{{ category }} alert-dismissible rounded-pill fw-bold" role="alert">
-					{{ message }}
-					<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</section>
+		<hr>
+		<section class="digits mt-4">
+			<div class="row">
+				<!-- Digits -->
+				<h2 class="text-center fw-bold mb-0">Achievements</h2>
+				<h3 class="text-center mb-4">What we've achieved and proud of</h3>
+				<div class="col-6 col-lg-3">
+					<div class="box d-flex flex-column justify-content-center align-items-center my-3 my-lg-0">
+						<i class="fa-solid fa-calendar-days fa-2xl"></i>
+						<h4 class="fw-bold">10+</h4>
+						<p class="text-center px-1 px-lg-4">Years of experience</p>
+					</div>
 				</div>
-				{% endfor %}
-				{% endif %}
-				{% endwith %}
-				<form method="post" class="d-flex flex-column" id="contact-form">
-					{{ form.hidden_tag() }}
-					{{ form.name() }}
-					{{ form.email() }}
-					{{ form.subject() }}
-					{{ form.message() }}
-					<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
-					<button type="submit" class="contact-link mx-auto focus-ring fw-bold my-2">Submit</button>
-				</form>
-				<div class="text-center mb-1">
-					<small class="fw-bold">
-						This site is protected by reCAPTCHA and the Google
-						<a href="https://policies.google.com/privacy" target="_blank" rel="norefferer"
-							class="focus-ring">Privacy
-							Policy</a> and
-						<a href="https://policies.google.com/terms" target="_blank" rel="norefferer"
-							class="focus-ring">Terms of
-							Service</a> apply.
-					</small>
+				<div class="col-6 col-lg-3">
+					<div class="box d-flex flex-column justify-content-center align-items-center my-3 my-lg-0">
+						<i class="fa-solid fa-truck fa-2xl"></i>
+						<h4 class="fw-bold">420</h4>
+						<p class="text-center px-1 px-lg-4">Cargo sent in 2022</p>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<div class="box d-flex flex-column justify-content-center align-items-center my-3 my-lg-0">
+						<i class="fa-solid fa-sack-dollar fa-2xl"></i>
+						<h4 class="fw-bold">2.3kk</h4>
+						<p class="text-center px-1 px-lg-4">Cash flow in 2022</p>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<div class="box d-flex flex-column justify-content-center align-items-center my-3 my-lg-0">
+						<i class="fa-solid fa-handshake-simple fa-2xl"></i>
+						<h4 class="fw-bold">15</h4>
+						<p class="text-center px-1 px-lg-4">Agreements in 2022</p>
+					</div>
 				</div>
 			</div>
-		</div>
+		</section>
+		<hr>
+		<section class="roadmap mt-4">
+			<div class="row">
+				<!-- Roadmap -->
+				<a name="how_it_works"></a>
+				<h2 class="text-center fw-bold mb-2 mb-lg-0">Production cycle</h2>
+				<h3 class="text-center mb-4">How it works?</h3>
+				<div class="timeline">
+					<div class="cell position-relative">
+						<div class="info">
+							<h4 class="title position-relative fw-bold">Buying or growing forest</h4>
+							<picture>
+								<source srcset="{{ url_for('static', filename='img/stages/growing_1.webp') }}"
+									type="image/webp">
+								<img src="{{ url_for('static', filename='img/stages/growing_1.jpg') }}"
+									alt="Buying or growing forest sample">
+							</picture>
+						</div>
+					</div>
+					<div class="cell position-relative">
+						<div class="info">
+							<h4 class="title position-relative fw-bold">Tree harvesting</h4>
+							<picture>
+								<source srcset="{{ url_for('static', filename='img/stages/harvesting_2.webp') }}"
+									type="image/webp">
+								<img src="{{ url_for('static', filename='img/stages/harvesting_2.jpg') }}"
+									alt="Tree harvesting sample">
+							</picture>
+						</div>
+					</div>
+					<div class="cell position-relative">
+						<div class="info">
+							<h4 class="title position-relative fw-bold">Tree processing</h4>
+							<picture>
+								<source srcset="{{ url_for('static', filename='img/stages/processing_3.webp') }}"
+									type="image/webp">
+								<img src="{{ url_for('static', filename='img/stages/processing_3.jpg') }}"
+									alt="Tree processing sample">
+							</picture>
+						</div>
+					</div>
+					<div class="cell position-relative">
+						<div class="info">
+							<h4 class="title position-relative fw-bold">Firewood drying</h4>
+							<picture>
+								<source srcset="{{ url_for('static', filename='img/stages/drying_4.webp') }}"
+									type="image/webp">
+								<img src="{{ url_for('static', filename='img/stages/drying_4.jpg') }}"
+									alt="Firewood drying sample">
+							</picture>
+						</div>
+					</div>
+					<div class="cell position-relative">
+						<div class="info">
+							<h4 class="title position-relative fw-bold">Firewood loading for delivery</h4>
+							<picture>
+								<source srcset="{{ url_for('static', filename='img/stages/loading_5.webp') }}"
+									type="image/webp">
+								<img src="{{ url_for('static', filename='img/stages/loading_5.jpg') }}"
+									alt="Firewood loading for delivery sample">
+							</picture>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<hr>
+		<section class="cnc mt-4">
+			<div class="row">
+				<!-- Contacts & Certificates-->
+				<a name="contacts"></a>
+				<h2 class="text-center fw-bold mb-0">Contacts</h2>
+				<h3 class="text-center mb-3">Find out how to reach us?</h3>
+				<div class="col-md-6">
+					<h4 class="text-center mb-3"><i class="fa-solid fa-bullhorn"></i>&nbsp;Call or email us directly:
+					</h4>
+					<ul class="list-unstyled text-center">
+						<li>
+							<i class="fa-solid fa-phone"></i><span class="fw-bold">&nbsp;Phone</span>:
+							<a href="tel:+37126677812" class="focus-ring">(+371) 26 677 812</a>
+						</li>
+						<li>
+							<i class="fa-solid fa-envelope"></i><span class="fw-bold">&nbsp;Email</span>:
+							<a href="mailto:forvest@inbox.lv" class="focus-ring">forvest@inbox.lv</a>
+						</li>
+					</ul>
+					<div class="d-flex justify-content-center align-items-center">
+						<picture>
+							<source srcset="{{ url_for('static', filename='img/certificate/fsc.webp') }}"
+								type="image/webp">
+							<img src="{{ url_for('static', filename='img/certificate/fsc.png') }}"
+								alt="FSC Certificate">
+						</picture>
+					</div>
+				</div>
+				<div class="col-12 col-md-6">
+					<h4 class="text-center mb-3">Use the form below:
+						<i class="fa-solid fa-arrow-turn-down"></i>
+					</h4>
+					{% with messages = get_flashed_messages(with_categories=true) %}
+					{% if messages %}
+					{% for category, message in messages %}
+					<div class="alert alert-{{ category }} alert-dismissible rounded-pill fw-bold" role="alert">
+						{{ message }}
+						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					</div>
+					{% endfor %}
+					{% endif %}
+					{% endwith %}
+					<form method="post" class="d-flex flex-column" id="contact-form">
+						{{ form.hidden_tag() }}
+						{{ form.name() }}
+						{{ form.email() }}
+						{{ form.subject() }}
+						{{ form.message() }}
+						<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
+						<button type="submit" class="contact-link mx-auto focus-ring fw-bold my-2">Submit</button>
+					</form>
+					<div class="text-center mb-1">
+						<small class="fw-bold">
+							This site is protected by reCAPTCHA and the Google
+							<a href="https://policies.google.com/privacy" target="_blank" rel="norefferer"
+								class="focus-ring">Privacy
+								Policy</a> and
+							<a href="https://policies.google.com/terms" target="_blank" rel="norefferer"
+								class="focus-ring">Terms of
+								Service</a> apply.
+						</small>
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
 </div>
 {% endblock %}
