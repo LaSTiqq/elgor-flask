@@ -255,12 +255,48 @@
 					{% endfor %}
 					{% endif %}
 					{% endwith %}
-					<form method="post" class="d-flex flex-column" id="contact-form">
+					<form method="post" class="d-flex flex-column was-validated" id="contact-form">
 						{{ form.hidden_tag() }}
-						{{ form.name() }}
-						{{ form.email() }}
-						{{ form.subject() }}
-						{{ form.message() }}
+						<div class="form-floating">
+							{{ form.name() }}
+							<label for="name">Name<span class="text-danger">*</span></label>
+							<div class="valid-feedback">
+								OK!
+							</div>
+							<div class="invalid-feedback">
+								Please enter a valid name!
+							</div>
+						</div>
+						<div class="form-floating">
+							{{ form.email() }}
+							<label for="email">Email<span class="text-danger">*</span></label>
+							<div class="valid-feedback">
+								OK!
+							</div>
+							<div class="invalid-feedback">
+								Please enter a valid email address!
+							</div>
+						</div>
+						<div class="form-floating">
+							{{ form.subject() }}
+							<label for="subject">Topic<span class="text-danger">*</span></label>
+							<div class="valid-feedback">
+								OK!
+							</div>
+							<div class="invalid-feedback">
+								Please enter a valid topic!
+							</div>
+						</div>
+						<div class="form-floating">
+							{{ form.message() }}
+							<label for="message">Message<span class="text-danger">*</span></label>
+							<div class="valid-feedback">
+								OK!
+							</div>
+							<div class="invalid-feedback">
+								Please enter a valid message at least 20 characters long!
+							</div>
+						</div>
 						<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
 						<button type="submit" class="contact-link mx-auto focus-ring fw-bold my-2">Submit</button>
 					</form>

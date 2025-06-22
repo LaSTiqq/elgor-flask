@@ -6,10 +6,12 @@ from wtforms.validators import DataRequired, Email, Length
 class ContactForm(FlaskForm):
     name = StringField(
         label='Name',
+        id='name',
         render_kw={
-            'class': 'form-control mb-1',
-            'placeholder': 'Your name *',
+            'class': 'form-control',
+            'placeholder': 'Your name',
             'autocomplete': 'off',
+            'value': 'John',
         },
         validators=[
             DataRequired(),
@@ -18,10 +20,12 @@ class ContactForm(FlaskForm):
     )
     email = EmailField(
         label='Email',
+        id='email',
         render_kw={
-            'class': 'form-control my-1',
-            'placeholder': 'Your email *',
+            'class': 'form-control',
+            'placeholder': 'Your email',
             'autocomplete': 'off',
+            'value': 'john.doe@gmail.com',
         },
         validators=[
             DataRequired(),
@@ -30,26 +34,28 @@ class ContactForm(FlaskForm):
     )
     subject = StringField(
         label='Topic',
+        id='subject',
         render_kw={
-            'class': 'form-control my-1',
-            'placeholder': 'Message topic *',
+            'class': 'form-control',
+            'placeholder': 'Topic',
             'autocomplete': 'off',
+            'value': 'Collaboration',
         },
         validators=[
             DataRequired(),
-            Length(min=5, max=30)
+            Length(min=5, max=25)
         ],
     )
     message = TextAreaField(
-        label='Text',
+        label='Message',
+        id='message',
         render_kw={
-            'class': 'form-control bg-transparent mt-1',
-            'placeholder': 'Message text *',
+            'class': 'form-control',
+            'placeholder': 'Message',
             'autocomplete': 'off',
-            'rows': 6,
         },
         validators=[
             DataRequired(),
-            Length(min=50)
+            Length(min=20)
         ],
     )
