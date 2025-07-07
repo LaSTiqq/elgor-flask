@@ -245,17 +245,11 @@
 					<h4 class="text-center mb-3">Use the form below:
 						<i class="fa-solid fa-arrow-turn-down"></i>
 					</h4>
-					{% with messages = get_flashed_messages(with_categories=true) %}
-					{% if messages %}
-					{% for category, message in messages %}
-					<div class="alert alert-{{ category }} alert-dismissible rounded-pill fw-bold" role="alert">
-						{{ message }}
-						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+					<div id="loader" class="text-center d-none">
+						<div class="spinner-border text-success mb-2" role="status" aria-hidden="true"></div>
 					</div>
-					{% endfor %}
-					{% endif %}
-					{% endwith %}
-					<form method="post" class="d-flex flex-column was-validated" id="contact-form">
+					<div id="alert" class="d-none" role="alert"></div>
+					<form method="post" class="d-flex flex-column was-validated" id="form">
 						{{ form.hidden_tag() }}
 						<div class="form-floating">
 							{{ form.name() }}
