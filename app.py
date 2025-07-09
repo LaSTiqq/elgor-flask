@@ -47,7 +47,7 @@ def send_ajax():
             return jsonify({"status": "warning", "message": "Captcha verification failed. Please try again."}), 400
 
         html_content = render_template("email.html", name=form.name.data,
-                                       sender=form.email.data, content=form.message.data)
+                                       email=form.email.data, message=form.message.data)
         text_content = re.sub(r"<[^>]+>", "", html_content)
         try:
             msg = Message(
