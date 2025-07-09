@@ -219,7 +219,7 @@
 				<a name="contacts"></a>
 				<h2 class="text-center fw-bold mb-0">Contacts</h2>
 				<h3 class="text-center mb-3">Find out how to reach us?</h3>
-				<div class="col-md-6">
+				<div class="col-12 col-md-6">
 					<h4 class="text-center mb-3"><i class="fa-solid fa-bullhorn"></i>&nbsp;Call or email us directly:
 					</h4>
 					<ul class="list-unstyled text-center">
@@ -249,7 +249,7 @@
 						<div class="spinner-border text-success mb-2" role="status" aria-hidden="true"></div>
 					</div>
 					<div id="alert" class="d-none" role="alert"></div>
-					<form method="post" class="d-flex flex-column was-validated" id="form">
+					<form method="post" class="was-validated" id="form">
 						{{ form.hidden_tag() }}
 						<div class="form-floating">
 							{{ form.name() }}
@@ -292,7 +292,8 @@
 							</div>
 						</div>
 						<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
-						<button type="submit" class="contact-link mx-auto focus-ring fw-bold my-2">Submit</button>
+						<button type="submit"
+							class="contact-link d-block mx-auto focus-ring fw-bold my-2">Submit</button>
 					</form>
 					<div class="text-center mb-1">
 						<small class="fw-bold">
