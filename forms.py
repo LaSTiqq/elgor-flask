@@ -8,10 +8,9 @@ class ContactForm(FlaskForm):
         label='Name',
         id='name',
         render_kw={
-            'class': 'form-control',
+            'class': 'form-control my-2',
             'placeholder': 'Your name',
             'autocomplete': 'off',
-            'value': 'John',
         },
         validators=[
             DataRequired(),
@@ -22,10 +21,9 @@ class ContactForm(FlaskForm):
         label='Email',
         id='email',
         render_kw={
-            'class': 'form-control',
+            'class': 'form-control my-2',
             'placeholder': 'Your email',
             'autocomplete': 'off',
-            'value': 'john.doe@gmail.com',
         },
         validators=[
             DataRequired(),
@@ -36,10 +34,9 @@ class ContactForm(FlaskForm):
         label='Topic',
         id='subject',
         render_kw={
-            'class': 'form-control',
+            'class': 'form-control my-2',
             'placeholder': 'Topic',
             'autocomplete': 'off',
-            'value': 'Collaboration',
         },
         validators=[
             DataRequired(),
@@ -50,7 +47,7 @@ class ContactForm(FlaskForm):
         label='Message',
         id='message',
         render_kw={
-            'class': 'form-control',
+            'class': 'form-control my-2',
             'placeholder': 'Message',
             'autocomplete': 'off',
         },
